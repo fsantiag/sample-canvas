@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.thoughtworks.sg.command.CommandFactoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-11-10T12:51:01" hostname="LAfsantiag" time="0.004">
+  <properties/>
+  <testcase name="shouldReturnAnInstanceOfXCommand" classname="org.thoughtworks.sg.command.CommandFactoryTest" time="0.002"/>
+  <testcase name="shouldReturnAnInstanceOfBCommand" classname="org.thoughtworks.sg.command.CommandFactoryTest" time="0.0"/>
+  <testcase name="shouldReturnAnInstanceOfLCommand" classname="org.thoughtworks.sg.command.CommandFactoryTest" time="0.001"/>
+  <testcase name="shouldReturnAnInstanceOfQCommand" classname="org.thoughtworks.sg.command.CommandFactoryTest" time="0.0"/>
+  <testcase name="shouldRaiseExceptionIfAInvalidCommandTypeIsPassed" classname="org.thoughtworks.sg.command.CommandFactoryTest" time="0.0"/>
+  <testcase name="shouldReturnAnInstanceOfCCommand" classname="org.thoughtworks.sg.command.CommandFactoryTest" time="0.0"/>
+  <testcase name="shouldReturnAnInstanceOfRCommand" classname="org.thoughtworks.sg.command.CommandFactoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

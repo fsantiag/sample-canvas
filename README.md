@@ -3,12 +3,13 @@
 
 This is a simple canvas command line tool made in Java.
 
-##1. Building
+## 1 . Building
+
 In order to build:
 
 ```./graglew build```
 
-##2. Running the app
+## 2. Running the app
 ```./graglew run```
 
 OR
@@ -17,7 +18,7 @@ in the *build/libs* folder:
 
 ```java -jar sample-canvas-1.0-SNAPSHOT.jar ```
 
-##3. Running the tests
+## 3. Running the tests
 ```./graglew test```
 
 ## Usage
@@ -34,6 +35,6 @@ B 7 6 c    // Bucket fill the canvas starting on point (7,6) with color 'c'
 Q          // quit the sample canvas
 ```
 
-## License
+# License
 
 Sample Canvas is an open source project under the [MIT License](https://opensource.org/licenses/MIT).

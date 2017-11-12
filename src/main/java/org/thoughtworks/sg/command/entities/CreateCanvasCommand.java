@@ -7,7 +7,7 @@ import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.util.List;
 
-public class CommandC extends AbstractCommand {
+public class CreateCanvasCommand extends AbstractCommand {
 
     @Override
     public Canvas execute(Canvas canvas, List<String> parameters) {
@@ -27,11 +27,5 @@ public class CommandC extends AbstractCommand {
             throw new CommandValidationException("Wrong number of arguments" +
                     " for command '" + CommandType.CREATE.getValue() + "'.");
         }
-    }
-
-    /**
-     * Created by fsantiag on 09/11/17.
-     */
-    public static class CommandX {
     }
 }

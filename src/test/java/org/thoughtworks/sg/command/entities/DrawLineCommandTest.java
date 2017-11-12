@@ -13,47 +13,32 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class CommandRTest {
+public class DrawLineCommandTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-    private CommandR commandR;
+    private DrawLineCommand drawLineCommand;
     private Canvas canvasOld;
 
     @Before
     public void setup() {
         System.setOut(new PrintStream(outContent));
-        commandR = new CommandR();
-        canvasOld = new Canvas(10, 20);
+        drawLineCommand = new DrawLineCommand();
+        canvasOld = new Canvas(5, 20);
     }
 
     @Test
-    public void shouldExecuteRCommand() {
+    public void shouldExecuteLCommand() {
         List<String> parameters = new ArrayList<>();
         parameters.add("5");
         parameters.add("3");
-        parameters.add("7");
+        parameters.add("5");
         parameters.add("10");
 
-        commandR = new CommandR();
-        Canvas canvasNew = commandR.execute(canvasOld, parameters);
+        Canvas canvasNew = drawLineCommand.execute(canvasOld, parameters);
 
-        for (int j = 3; j <= 10; j++){
-            assertEquals(
-                    "x",
-                    canvasNew.getMatrix()[5][j].getColor());
-            assertEquals(
-                    "x",
-                    canvasNew.getMatrix()[7][j].getColor());
-        }
-
-        for (int i = 5; i <= 7; i++){
-            assertEquals(
-                    "x",
-                    canvasNew.getMatrix()[i][3].getColor());
-            assertEquals(
-                    "x",
-                    canvasNew.getMatrix()[i][10].getColor());
+        for(int j = 3; j <= 10; j++) {
+            assertEquals("x", canvasNew.getMatrix()[5][j].getColor());
         }
 
         String canvasString =
@@ -63,11 +48,6 @@ public class CommandRTest {
                 "|                    |\n" +
                 "|                    |\n" +
                 "|  xxxxxxxx          |\n" +
-                "|  x      x          |\n" +
-                "|  xxxxxxxx          |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
                 "*--------------------*\n";
 
         assertEquals(canvasString, outContent.toString());
@@ -80,9 +60,9 @@ public class CommandRTest {
 
         boolean hasError = false;
         try {
-            commandR.execute(canvasOld, parameters);
+            drawLineCommand.execute(canvasOld, parameters);
         } catch (CommandValidationException e) {
-            assertEquals("Wrong number of arguments for command 'R'.", e.getMessage());
+            assertEquals("Wrong number of arguments for command 'L'.", e.getMessage());
             hasError = true;
         }
         assertTrue(hasError);

@@ -10,20 +10,19 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.util.Collections.emptyList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class CommandBTest {
+public class BucketFillCommandTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-    private CommandB commandB;
+    private BucketFillCommand bucketFillCommand;
 
     @Before
     public void setup() {
         System.setOut(new PrintStream(outContent));
-        commandB = new CommandB();
+        bucketFillCommand = new BucketFillCommand();
     }
 
     @Test
@@ -34,8 +33,8 @@ public class CommandBTest {
         parameters.add("8");
         parameters.add("3");
         parameters.add("m");
-        commandB = new CommandB();
-        commandB.execute(canvasOld, parameters);
+        bucketFillCommand = new BucketFillCommand();
+        bucketFillCommand.execute(canvasOld, parameters);
 
         String canvasString =
                 "*--------------------*\n" +
@@ -74,7 +73,7 @@ public class CommandBTest {
         parameters.add("10");
         Canvas canvasOld = new Canvas(10, 20);
 
-        return new CommandR().execute(canvasOld, parameters);
+        return new DrawRectangleCommand().execute(canvasOld, parameters);
     }
 
     @Test
@@ -83,11 +82,11 @@ public class CommandBTest {
         parameters.add("8");
         parameters.add("3");
         parameters.add("haaha");
-        commandB = new CommandB();
+        bucketFillCommand = new BucketFillCommand();
         boolean hasError = false;
         Canvas canvasOld = new Canvas(10, 20);
         try {
-            commandB.execute(canvasOld, parameters);
+            bucketFillCommand.execute(canvasOld, parameters);
         } catch (CommandValidationException e) {
             assertEquals("The color for the 'B' command should be one single character.", e.getMessage());
             hasError = true;
@@ -105,7 +104,7 @@ public class CommandBTest {
 
         boolean hasError = false;
         try {
-            commandB.execute(canvasOld, parameters);
+            bucketFillCommand.execute(canvasOld, parameters);
         } catch (CommandValidationException e) {
             assertEquals("Wrong number of arguments for command 'B'.", e.getMessage());
             hasError = true;

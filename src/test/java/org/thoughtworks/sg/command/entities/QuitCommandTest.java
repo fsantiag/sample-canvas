@@ -5,15 +5,15 @@ import org.junit.Test;
 
 import static java.util.Collections.emptyList;
 
-public class CommandQTest {
+public class QuitCommandTest {
 
-    private CommandQ commandQ;
+    private QuitCommand quitCommand;
 
     @Test
     public void shouldGenerateACommand() {
-        commandQ = new CommandQ();
+        quitCommand = new QuitCommand();
         try {
-            commandQ.execute(null, emptyList());
+            quitCommand.execute(null, emptyList());
         } catch (RuntimeException e) {
             Assert.assertEquals("QUIT", e.getMessage());
         }

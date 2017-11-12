@@ -6,7 +6,7 @@ import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.util.List;
 
-public class CommandQ extends AbstractCommand {
+public class QuitCommand extends AbstractCommand {
 
     @Override
     public Canvas execute(Canvas canvas, List<String> parameters) {

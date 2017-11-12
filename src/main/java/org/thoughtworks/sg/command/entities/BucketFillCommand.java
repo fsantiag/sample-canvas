@@ -8,7 +8,7 @@ import org.thoughtworks.sg.exceptions.CommandValidationException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommandB extends AbstractCommand {
+public class BucketFillCommand extends AbstractCommand {
 
     @Override
     public Canvas execute(Canvas canvas, List<String> parameters) {

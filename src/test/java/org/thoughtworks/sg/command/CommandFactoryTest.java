@@ -12,31 +12,31 @@ public class CommandFactoryTest {
     @Test
     public void shouldReturnAnInstanceOfCCommand() {
         AbstractCommand command = CommandFactory.getCommand("c");
-        assertTrue(command instanceof CommandC);
+        assertTrue(command instanceof CreateCanvasCommand);
     }
 
     @Test
     public void shouldReturnAnInstanceOfRCommand() {
         AbstractCommand command = CommandFactory.getCommand("r");
-        assertTrue(command instanceof CommandR);
+        assertTrue(command instanceof DrawRectangleCommand);
     }
 
     @Test
     public void shouldReturnAnInstanceOfLCommand() {
         AbstractCommand command = CommandFactory.getCommand("l");
-        assertTrue(command instanceof CommandL);
+        assertTrue(command instanceof DrawLineCommand);
     }
 
     @Test
     public void shouldReturnAnInstanceOfQCommand() {
         AbstractCommand command = CommandFactory.getCommand("q");
-        assertTrue(command instanceof CommandQ);
+        assertTrue(command instanceof QuitCommand);
     }
 
     @Test
     public void shouldReturnAnInstanceOfBCommand() {
         AbstractCommand command = CommandFactory.getCommand("b");
-        assertTrue(command instanceof CommandB);
+        assertTrue(command instanceof BucketFillCommand);
     }
 
     @Test

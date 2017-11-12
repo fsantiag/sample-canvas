@@ -8,7 +8,9 @@ import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.util.List;
 
-public class CommandR extends AbstractCommand {
+public class DrawLineCommand extends AbstractCommand {
+
+    public static final String DEFAULT_LINE_MARK = "x";
 
     @Override
     public Canvas execute(Canvas canvas, List<String> parameters) {
@@ -22,12 +24,13 @@ public class CommandR extends AbstractCommand {
 
             Point p1 = new Point(i1, j1);
             Point p2 = new Point(i2, j2);
-            canvas.drawRectangle(p1, p2);
+            canvas.drawLine(p1, p2, DEFAULT_LINE_MARK);
             canvas.render();
         }
         return canvas;
     }
 
+    @Override
     public List<Integer> validate(List<String> parameters, Canvas canvas) throws CommandValidationException {
         if (parameters.size() >= 4) {
             List<Integer> parametersAsInt = super.validateAndParseParameters(parameters);
@@ -36,7 +39,7 @@ public class CommandR extends AbstractCommand {
             return parametersAsInt;
         } else {
             throw new CommandValidationException("Wrong number of arguments" +
-                    " for command '" + CommandType.RECTANGLE.getValue() + "'.");
+                    " for command '"+ CommandType.LINE.getValue()+"'.");
         }
     }
 }

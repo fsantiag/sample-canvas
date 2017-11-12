@@ -40,12 +40,6 @@ public class CommandFactoryTest {
     }
 
     @Test
-    public void shouldReturnAnInstanceOfXCommand() {
-        AbstractCommand command = CommandFactory.getCommand("x");
-        assertTrue(command instanceof CommandX);
-    }
-
-    @Test
     public void shouldRaiseExceptionIfAInvalidCommandTypeIsPassed() {
         boolean hasError = false;
         try {

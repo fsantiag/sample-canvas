@@ -70,21 +70,6 @@ public class CanvasTest {
     }
 
     @Test
-    public void shouldDrawACross() {
-
-        Point p1 = new Point(3, 10);
-
-        canvas.drawCross(p1);
-
-        assertEquals(canvas.getMatrix()[3][11].getColor(), "x");
-        assertEquals(canvas.getMatrix()[3][10].getColor(), "x");
-        assertEquals(canvas.getMatrix()[3][9].getColor(), "x");
-        assertEquals(canvas.getMatrix()[2][10].getColor(), "x");
-        assertEquals(canvas.getMatrix()[3][10].getColor(), "x");
-        assertEquals(canvas.getMatrix()[4][10].getColor(), "x");
-    }
-
-    @Test
     public void shouldBucketFillTheCanvas() {
         System.setOut(new PrintStream(outContent));
         Point p1 = new Point(2,1);

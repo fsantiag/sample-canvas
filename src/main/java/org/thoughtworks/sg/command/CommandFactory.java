@@ -12,7 +12,6 @@ public class CommandFactory {
         if (RECTANGLE.getValue().equalsIgnoreCase(type)) return new CommandR();
         if (BUCKET.getValue().equalsIgnoreCase(type)) return new CommandB();
         if (CREATE.getValue().equalsIgnoreCase(type)) return new CommandC();
-        if (CROSS.getValue().equalsIgnoreCase(type)) return new CommandX();
         throw new CommandValidationException("Invalid command.");
     }
 }

@@ -5,8 +5,7 @@ public enum CommandType {
     LINE("L"),
     RECTANGLE("R"),
     BUCKET("B"),
-    CREATE("C"),
-    CROSS("X");
+    CREATE("C");
 
     private String value;
 

@@ -24,6 +24,4 @@ public class CommandTypeTest {
         Assert.assertEquals("R", CommandType.RECTANGLE.getValue());
     }
 
-    @Test
-    public void shouldReturnXForTheCrossType() {Assert.assertEquals("X", CommandType.CROSS.getValue());}
 }

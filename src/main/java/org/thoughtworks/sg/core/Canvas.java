@@ -105,11 +105,4 @@ public class Canvas {
         return columns;
     }
 
-    public void drawCross(Point p1) {
-        matrix[p1.getI()][p1.getJ()] = new Point(p1.getI(), p1.getJ(), "x");
-        matrix[p1.getI() + 1][p1.getJ()] = new Point(p1.getI() + 1, p1.getJ(), "x");
-        matrix[p1.getI() - 1][p1.getJ()] = new Point(p1.getI() - 1, p1.getJ(), "x");
-        matrix[p1.getI()][p1.getJ() + 1] = new Point(p1.getI(), p1.getJ() + 1, "x");
-        matrix[p1.getI()][p1.getJ() - 1] = new Point(p1.getI(),p1.getJ() - 1, "x");
-    }
 }

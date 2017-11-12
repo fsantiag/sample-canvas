@@ -1,6 +1,5 @@
 package org.thoughtworks.sg.command;
 
-import org.thoughtworks.sg.command.entities.*;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import static org.thoughtworks.sg.command.CommandType.*;

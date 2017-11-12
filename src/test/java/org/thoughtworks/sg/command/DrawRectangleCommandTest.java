@@ -1,8 +1,9 @@
-package org.thoughtworks.sg.command.entities;
+package org.thoughtworks.sg.command;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.thoughtworks.sg.core.Canvas;
+import org.thoughtworks.sg.command.DrawRectangleCommand;
+import org.thoughtworks.sg.canvas.Canvas;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.io.ByteArrayOutputStream;

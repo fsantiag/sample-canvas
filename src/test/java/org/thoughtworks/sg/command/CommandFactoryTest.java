@@ -1,7 +1,6 @@
 package org.thoughtworks.sg.command;
 
 import org.junit.Test;
-import org.thoughtworks.sg.command.entities.*;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import static org.junit.Assert.assertEquals;

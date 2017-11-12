@@ -1,7 +1,8 @@
-package org.thoughtworks.sg.command.entities;
+package org.thoughtworks.sg.command;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.thoughtworks.sg.command.QuitCommand;
 
 import static java.util.Collections.emptyList;
 

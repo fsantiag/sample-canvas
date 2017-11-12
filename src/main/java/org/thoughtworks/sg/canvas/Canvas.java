@@ -1,4 +1,4 @@
-package org.thoughtworks.sg.core;
+package org.thoughtworks.sg.canvas;
 
 public class Canvas {
 

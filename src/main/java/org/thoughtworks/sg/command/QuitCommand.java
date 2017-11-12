@@ -1,7 +1,6 @@
-package org.thoughtworks.sg.command.entities;
+package org.thoughtworks.sg.command;
 
-import org.thoughtworks.sg.command.AbstractCommand;
-import org.thoughtworks.sg.core.Canvas;
+import org.thoughtworks.sg.canvas.Canvas;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.util.List;

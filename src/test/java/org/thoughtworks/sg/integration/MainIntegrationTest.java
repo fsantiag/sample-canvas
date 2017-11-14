@@ -25,7 +25,7 @@ public class MainIntegrationTest {
     public void testMainRoutine() throws IOException {
         String canvasOutput =
                 "*** Welcome to Sample Canvas! ***\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "*----------------------------------------*\n" +
                 "|                                        |\n" +
                 "|                                        |\n" +
@@ -33,7 +33,7 @@ public class MainIntegrationTest {
                 "|                                        |\n" +
                 "|                                        |\n" +
                 "*----------------------------------------*\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "*----------------------------------------*\n" +
                 "|                                        |\n" +
                 "|    xxxxxxxxxxxxxxxxxxxxxxxxxx          |\n" +
@@ -41,7 +41,7 @@ public class MainIntegrationTest {
                 "|                                        |\n" +
                 "|                                        |\n" +
                 "*----------------------------------------*\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "*----------------------------------------*\n" +
                 "|                                        |\n" +
                 "|    xxxxxxxxxxxxxxxxxxxxxxxxxx          |\n" +
@@ -49,7 +49,7 @@ public class MainIntegrationTest {
                 "|       x                               x|\n" +
                 "|       xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|\n" +
                 "*----------------------------------------*\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "*----------------------------------------*\n" +
                 "|                                        |\n" +
                 "|    xxxxxxxxxxxxxxxxxxxxxxxxxx          |\n" +
@@ -57,20 +57,20 @@ public class MainIntegrationTest {
                 "|       xooooooooooooooooooooooooooooooox|\n" +
                 "|       xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|\n" +
                 "*----------------------------------------*\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "Error: Invalid commands.\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "Error: Wrong number of arguments for commands 'C'.\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "Error: Wrong number of arguments for commands 'L'.\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "Error: Wrong number of arguments for commands 'B'.\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "Error: Wrong number of arguments for commands 'R'.\n" +
-                "Enter the commands: \n" +
-                "Error: This commands accepts two pairs of points with the " +
+                "Enter the command: \n" +
+                "Error: This command accepts two pairs of points with the " +
                 "following constraint: (i1, j1) and (i2, j2) where i1 < i2 and j1 < j2\n" +
-                "Enter the commands: \n" +
+                "Enter the command: \n" +
                 "Exiting models...\n";
 
         Assert.assertEquals(canvasOutput, outContent.toString());

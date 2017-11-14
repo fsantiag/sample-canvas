@@ -52,7 +52,7 @@ public abstract class AbstractCommand {
         if (parametersAsInt.get(0) > parametersAsInt.get(2)
                 || parametersAsInt.get(1) > parametersAsInt.get(3)) {
             throw new CommandValidationException(
-                    "This commands accepts two pairs of points with the following constraint:" +
+                    "This command accepts two pairs of points with the following constraint:" +
                             " (i1, j1) and (i2, j2) where i1 < i2 and j1 < j2");
         }
     }

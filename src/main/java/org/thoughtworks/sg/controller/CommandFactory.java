@@ -1,8 +1,9 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller;
 
+import org.thoughtworks.sg.controller.commands.*;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
-import static org.thoughtworks.sg.command.CommandType.*;
+import static org.thoughtworks.sg.controller.CommandType.*;
 
 public class CommandFactory {
     public static AbstractCommand getCommand(String type){
@@ -11,6 +12,6 @@ public class CommandFactory {
         if (RECTANGLE.getValue().equalsIgnoreCase(type)) return new DrawRectangleCommand();
         if (BUCKET.getValue().equalsIgnoreCase(type)) return new BucketFillCommand();
         if (CREATE.getValue().equalsIgnoreCase(type)) return new CreateCanvasCommand();
-        throw new CommandValidationException("Invalid command.");
+        throw new CommandValidationException("Invalid commands.");
     }
 }

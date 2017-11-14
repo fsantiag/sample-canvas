@@ -1,6 +1,7 @@
-package org.thoughtworks.sg.canvas;
+package org.thoughtworks.sg.models.canvas;
 
 import org.junit.Test;
+import org.thoughtworks.sg.models.canvas.Point;
 
 import static org.junit.Assert.*;
 

@@ -1,10 +1,10 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller.commands;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.thoughtworks.sg.command.BucketFillCommand;
-import org.thoughtworks.sg.command.DrawRectangleCommand;
-import org.thoughtworks.sg.canvas.Canvas;
+import org.thoughtworks.sg.models.canvas.Canvas;
+import org.thoughtworks.sg.controller.commands.BucketFillCommand;
+import org.thoughtworks.sg.controller.commands.DrawRectangleCommand;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.io.ByteArrayOutputStream;
@@ -90,7 +90,7 @@ public class BucketFillCommandTest {
         try {
             bucketFillCommand.execute(canvasOld, parameters);
         } catch (CommandValidationException e) {
-            assertEquals("The color for the 'B' command should be one single character.", e.getMessage());
+            assertEquals("The color for the 'B' commands should be one single character.", e.getMessage());
             hasError = true;
         }
         assertTrue(hasError);
@@ -108,7 +108,7 @@ public class BucketFillCommandTest {
         try {
             bucketFillCommand.execute(canvasOld, parameters);
         } catch (CommandValidationException e) {
-            assertEquals("Wrong number of arguments for command 'B'.", e.getMessage());
+            assertEquals("Wrong number of arguments for commands 'B'.", e.getMessage());
             hasError = true;
         }
         assertTrue(hasError);

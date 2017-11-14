@@ -1,8 +1,8 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller.commands;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.thoughtworks.sg.command.QuitCommand;
+import org.thoughtworks.sg.controller.commands.QuitCommand;
 
 import static java.util.Collections.emptyList;
 

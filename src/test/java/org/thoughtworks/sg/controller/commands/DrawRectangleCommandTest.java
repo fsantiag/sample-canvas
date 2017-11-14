@@ -1,9 +1,9 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller.commands;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.thoughtworks.sg.command.DrawRectangleCommand;
-import org.thoughtworks.sg.canvas.Canvas;
+import org.thoughtworks.sg.models.canvas.Canvas;
+import org.thoughtworks.sg.controller.commands.DrawRectangleCommand;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.io.ByteArrayOutputStream;
@@ -83,7 +83,7 @@ public class DrawRectangleCommandTest {
         try {
             drawRectangleCommand.execute(canvasOld, parameters);
         } catch (CommandValidationException e) {
-            assertEquals("Wrong number of arguments for command 'R'.", e.getMessage());
+            assertEquals("Wrong number of arguments for commands 'R'.", e.getMessage());
             hasError = true;
         }
         assertTrue(hasError);

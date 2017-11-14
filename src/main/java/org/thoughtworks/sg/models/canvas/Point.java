@@ -1,4 +1,4 @@
-package org.thoughtworks.sg.canvas;
+package org.thoughtworks.sg.models.canvas;
 
 public class Point {
     private int i;

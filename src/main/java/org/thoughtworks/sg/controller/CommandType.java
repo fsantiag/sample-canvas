@@ -1,4 +1,4 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller;
 
 public enum CommandType {
     QUIT("Q"),

@@ -1,4 +1,6 @@
-package org.thoughtworks.sg.canvas;
+package org.thoughtworks.sg.models.canvas;
+
+import org.thoughtworks.sg.models.shapes.Shape;
 
 public class Canvas {
 
@@ -17,6 +19,9 @@ public class Canvas {
         createEmptyCanvas();
     }
 
+    public void drawShape(Shape shape) {
+        shape.draw(matrix);
+    }
 
     public void drawLine(Point p1, Point p2, String color) {
         for(int i = p1.getI(); i <= p2.getI(); i++) {
@@ -24,35 +29,6 @@ public class Canvas {
                 matrix[i][j] = new Point(i, i, color);
             }
         }
-    }
-
-    public void drawRectangle(Point p1, Point p2) {
-        Point p3 = new Point(p1.getI(), p2.getJ());
-        Point p4 = new Point(p2.getI(), p1.getJ());
-
-        //horizontal lines
-        drawLine(p1, p3, "x");
-        drawLine(p4, p2, "x");
-
-        //vertical lines
-        drawLine(p1, p4, "x");
-        drawLine(p3, p2, "x");
-    }
-
-    public void bucketFill(int i, int j, String color) {
-        if (i < 1 || i > this.lines - 2) return;
-        if (j < 1 || j > this.columns - 2) return;
-
-        Point point = matrix[i][j];
-        if (point.getColor().equals("x")) return;
-        if (point.getColor().equals(color)) return;
-
-        point.setColor(color);
-
-        bucketFill(i - 1, j, color);
-        bucketFill(i + 1, j, color);
-        bucketFill(i, j - 1, color);
-        bucketFill(i, j + 1, color);
     }
 
     public void render() {

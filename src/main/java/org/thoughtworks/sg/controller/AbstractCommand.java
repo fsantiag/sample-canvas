@@ -1,6 +1,6 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller;
 
-import org.thoughtworks.sg.canvas.Canvas;
+import org.thoughtworks.sg.models.canvas.Canvas;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.util.ArrayList;
@@ -21,11 +21,11 @@ public abstract class AbstractCommand {
                     if (value < 0) throw new NumberFormatException();
                     return value;
                 } catch (NumberFormatException e) {
-                    throw new CommandValidationException("This command only supports positive integers as parameters.");
+                    throw new CommandValidationException("This commands only supports positive integers as parameters.");
                 }
             }).collect(Collectors.toList());
         }
-        throw new CommandValidationException("The parameters for this command are empty.");
+        throw new CommandValidationException("The parameters for this commands are empty.");
     }
 
     public void validateCanvasLimits(Canvas canvas, List<Integer> parametersAsInt) {
@@ -52,7 +52,7 @@ public abstract class AbstractCommand {
         if (parametersAsInt.get(0) > parametersAsInt.get(2)
                 || parametersAsInt.get(1) > parametersAsInt.get(3)) {
             throw new CommandValidationException(
-                    "This command accepts two pairs of points with the following constraint:" +
+                    "This commands accepts two pairs of points with the following constraint:" +
                             " (i1, j1) and (i2, j2) where i1 < i2 and j1 < j2");
         }
     }

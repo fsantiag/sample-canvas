@@ -1,6 +1,8 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller.commands;
 
-import org.thoughtworks.sg.canvas.Canvas;
+import org.thoughtworks.sg.models.canvas.Canvas;
+import org.thoughtworks.sg.controller.AbstractCommand;
+import org.thoughtworks.sg.controller.CommandType;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.util.List;
@@ -23,7 +25,7 @@ public class CreateCanvasCommand extends AbstractCommand {
             return super.validateAndParseParameters(parameters);
         } else {
             throw new CommandValidationException("Wrong number of arguments" +
-                    " for command '" + CommandType.CREATE.getValue() + "'.");
+                    " for commands '" + CommandType.CREATE.getValue() + "'.");
         }
     }
 }

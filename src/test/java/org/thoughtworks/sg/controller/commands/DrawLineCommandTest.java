@@ -1,9 +1,9 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller.commands;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.thoughtworks.sg.command.DrawLineCommand;
-import org.thoughtworks.sg.canvas.Canvas;
+import org.thoughtworks.sg.models.canvas.Canvas;
+import org.thoughtworks.sg.controller.commands.DrawLineCommand;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.io.ByteArrayOutputStream;
@@ -63,7 +63,7 @@ public class DrawLineCommandTest {
         try {
             drawLineCommand.execute(canvasOld, parameters);
         } catch (CommandValidationException e) {
-            assertEquals("Wrong number of arguments for command 'L'.", e.getMessage());
+            assertEquals("Wrong number of arguments for commands 'L'.", e.getMessage());
             hasError = true;
         }
         assertTrue(hasError);

@@ -1,4 +1,4 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller;
 
 import org.junit.Assert;
 import org.junit.Test;

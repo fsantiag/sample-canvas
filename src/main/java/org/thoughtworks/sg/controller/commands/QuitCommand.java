@@ -1,6 +1,7 @@
-package org.thoughtworks.sg.command;
+package org.thoughtworks.sg.controller.commands;
 
-import org.thoughtworks.sg.canvas.Canvas;
+import org.thoughtworks.sg.models.canvas.Canvas;
+import org.thoughtworks.sg.controller.AbstractCommand;
 import org.thoughtworks.sg.exceptions.CommandValidationException;
 
 import java.util.List;
@@ -9,7 +10,7 @@ public class QuitCommand extends AbstractCommand {
 
     @Override
     public Canvas execute(Canvas canvas, List<String> parameters) {
-        System.out.println("Exiting canvas...");
+        System.out.println("Exiting models...");
         throw new CommandValidationException("QUIT");
     }
 

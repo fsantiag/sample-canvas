@@ -12,8 +12,8 @@ public class Line implements Shape {
     }
 
     @Override
-    public void draw(Point[][] canvas) {
-        this.draw(canvas, DEFAULT_LINE_COLOR);
+    public void draw(Point[][] matrix) {
+        this.draw(matrix, DEFAULT_LINE_COLOR);
     }
 
     public void draw(Point[][] canvas, String color) {

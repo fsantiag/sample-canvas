@@ -11,7 +11,7 @@ public class Rectangle implements Shape {
     }
 
     @Override
-    public void draw(Point[][] canvas) {
+    public void draw(Point[][] matrix) {
         Point upperLeftCorner = this.points[0];
         Point lowerRightCorner = this.points[1];
         Point upperRightCorner = new Point(upperLeftCorner.getI(), lowerRightCorner.getJ());
@@ -22,9 +22,9 @@ public class Rectangle implements Shape {
         Line left = new Line(upperLeftCorner, lowerLeftCorner);
         Line right = new Line(upperRightCorner, lowerRightCorner);
 
-        top.draw(canvas);
-        bottom.draw(canvas);
-        left.draw(canvas);
-        right.draw(canvas);
+        top.draw(matrix);
+        bottom.draw(matrix);
+        left.draw(matrix);
+        right.draw(matrix);
     }
 }

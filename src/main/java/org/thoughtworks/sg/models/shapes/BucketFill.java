@@ -13,8 +13,8 @@ public class BucketFill implements Shape {
     }
 
     @Override
-    public void draw(Point[][] canvas) {
-        this.bucketFill(canvas, this.point.getI(), this.point.getJ(), this.color);
+    public void draw(Point[][] matrix) {
+        this.bucketFill(matrix, this.point.getI(), this.point.getJ(), this.color);
     }
 
     private void bucketFill(Point[][] canvas, int i, int j, String color) {

@@ -63,7 +63,7 @@ public class AbstractCommandTest {
         try {
             abstractCommand.validateCommandPointsOrder(parameters);
         } catch (CommandValidationException e) {
-            assertEquals("This commands accepts two pairs of points with the" +
+            assertEquals("This command accepts two pairs of points with the" +
                     " following constraint: (i1, j1) and (i2, j2) where i1 < i2 and j1 < j2", e.getMessage());
             hasError = true;
         }
@@ -89,7 +89,7 @@ public class AbstractCommandTest {
         try {
             abstractCommand.validateAndParseParameters(parameters);
         } catch (CommandValidationException e) {
-            assertEquals("This commands only supports positive integers as parameters.", e.getMessage());
+            assertEquals("This command only supports positive integers as parameters.", e.getMessage());
             hasError = true;
         }
         assertTrue(hasError);
@@ -101,7 +101,7 @@ public class AbstractCommandTest {
         try {
             abstractCommand.validateAndParseParameters(emptyList());
         } catch (CommandValidationException e) {
-            assertEquals("The parameters for this commands are empty.", e.getMessage());
+            assertEquals("The parameters for this command are empty.", e.getMessage());
             hasError = true;
         }
         assertTrue(hasError);

@@ -21,11 +21,11 @@ public abstract class AbstractCommand {
                     if (value < 0) throw new NumberFormatException();
                     return value;
                 } catch (NumberFormatException e) {
-                    throw new CommandValidationException("This commands only supports positive integers as parameters.");
+                    throw new CommandValidationException("This command only supports positive integers as parameters.");
                 }
             }).collect(Collectors.toList());
         }
-        throw new CommandValidationException("The parameters for this commands are empty.");
+        throw new CommandValidationException("The parameters for this command are empty.");
     }
 
     public void validateCanvasLimits(Canvas canvas, List<Integer> parametersAsInt) {

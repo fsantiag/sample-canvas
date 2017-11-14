@@ -17,13 +17,14 @@ public class BucketFillTest {
 
     @Before
     public void setup(){
-        System.setOut(new PrintStream(outContent));
         canvas = new Canvas(10 , 20);
     }
 
     @Test
     public void shouldBucketFillTheCanvas() {
         System.setOut(new PrintStream(outContent));
+        PrintStream oldOutputStream = System.out;
+
         Point p1 = new Point(2,1);
         Point p2 = new Point(7,20);
 
@@ -49,6 +50,6 @@ public class BucketFillTest {
                 "*--------------------*\n";
 
         assertEquals(canvasFilled, outContent.toString());
-        System.setOut(null);
+        System.setOut(oldOutputStream);
     }
 }

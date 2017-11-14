@@ -36,7 +36,7 @@ public class CommandFactoryTest {
     @Test
     public void shouldReturnAnInstanceOfBCommand() {
         AbstractCommand command = CommandFactory.getCommand("b");
-        assertTrue(command instanceof BucketFillCommand);
+        assertTrue(command instanceof DrawBucketFillCommand);
     }
 
     @Test

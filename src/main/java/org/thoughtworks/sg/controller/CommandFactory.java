@@ -10,7 +10,7 @@ public class CommandFactory {
         if (QUIT.getValue().equalsIgnoreCase(type)) return new QuitCommand();
         if (LINE.getValue().equalsIgnoreCase(type)) return new DrawLineCommand();
         if (RECTANGLE.getValue().equalsIgnoreCase(type)) return new DrawRectangleCommand();
-        if (BUCKET.getValue().equalsIgnoreCase(type)) return new BucketFillCommand();
+        if (BUCKET.getValue().equalsIgnoreCase(type)) return new DrawBucketFillCommand();
         if (CREATE.getValue().equalsIgnoreCase(type)) return new CreateCanvasCommand();
         throw new CommandValidationException("Invalid commands.");
     }

@@ -10,7 +10,7 @@ import org.thoughtworks.sg.models.shapes.BucketFill;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BucketFillCommand extends AbstractCommand {
+public class DrawBucketFillCommand extends AbstractCommand {
 
     @Override
     public Canvas execute(Canvas canvas, List<String> parameters) {

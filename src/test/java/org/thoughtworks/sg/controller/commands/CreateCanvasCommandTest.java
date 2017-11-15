@@ -37,20 +37,21 @@ public class CreateCanvasCommandTest {
 
         assertNotEquals(null, canvas);
 
-        String canvasString =
-                "*----------*\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "*----------*\n";
+        String lineBreak = System.getProperty("line.separator");
 
+        String canvasString =
+                "*----------*"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "|          |"+ lineBreak +
+                "*----------*"+ lineBreak ;
         assertEquals(canvasString, outContent.toString());
     }
 

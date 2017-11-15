@@ -35,19 +35,21 @@ public class BucketFillTest {
         canvas.drawShape(bucketFill);
         canvas.render();
 
+        String lineBreak = System.getProperty("line.separator");
+
         String canvasFilled =
-                "*--------------------*\n" +
-                "|                    |\n" +
-                "|xxxxxxxxxxxxxxxxxxxx|\n" +
-                "|x                  x|\n" +
-                "|x                  x|\n" +
-                "|x                  x|\n" +
-                "|x                  x|\n" +
-                "|xxxxxxxxxxxxxxxxxxxx|\n" +
-                "|oooooooooooooooooooo|\n" +
-                "|oooooooooooooooooooo|\n" +
-                "|oooooooooooooooooooo|\n" +
-                "*--------------------*\n";
+                "*--------------------*" + lineBreak +
+                "|                    |" + lineBreak +
+                "|xxxxxxxxxxxxxxxxxxxx|" + lineBreak +
+                "|x                  x|" + lineBreak +
+                "|x                  x|" + lineBreak +
+                "|x                  x|" + lineBreak +
+                "|x                  x|" + lineBreak +
+                "|xxxxxxxxxxxxxxxxxxxx|" + lineBreak +
+                "|oooooooooooooooooooo|" + lineBreak +
+                "|oooooooooooooooooooo|" + lineBreak +
+                "|oooooooooooooooooooo|" + lineBreak +
+                "*--------------------*" + lineBreak;
 
         assertEquals(canvasFilled, outContent.toString());
         System.setOut(oldOutputStream);

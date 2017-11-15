@@ -42,14 +42,15 @@ public class DrawLineCommandTest {
             assertEquals("x", canvasNew.getMatrix()[5][j].getColor());
         }
 
+        String lineBreak = System.getProperty("line.separator");
         String canvasString =
-                "*--------------------*\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|  xxxxxxxx          |\n" +
-                "*--------------------*\n";
+                "*--------------------*"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|  xxxxxxxx          |"+ lineBreak +
+                "*--------------------*"+ lineBreak;
 
         assertEquals(canvasString, outContent.toString());
     }

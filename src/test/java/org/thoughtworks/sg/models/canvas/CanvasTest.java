@@ -30,20 +30,21 @@ public class CanvasTest {
 
     @Test
     public void shouldRenderTheCanvas() {
+        String lineBreak = System.getProperty("line.separator");
         System.setOut(new PrintStream(outContent));
         String canvasString =
-                "*--------------------*\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "*--------------------*\n";
+                "*--------------------*" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "|                    |" + lineBreak +
+                "*--------------------*" + lineBreak;
 
         canvas.render();
 

@@ -36,31 +36,33 @@ public class DrawBucketFillCommandTest {
         drawBucketFillCommand = new DrawBucketFillCommand();
         drawBucketFillCommand.execute(canvasOld, parameters);
 
+        String lineBreak = System.getProperty("line.separator");
+
         String canvasString =
-                "*--------------------*\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|  xxxxxxxx          |\n" +
-                "|  x      x          |\n" +
-                "|  xxxxxxxx          |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "|                    |\n" +
-                "*--------------------*\n" +
-                "*--------------------*\n" +
-                "|mmmmmmmmmmmmmmmmmmmm|\n" +
-                "|mmmmmmmmmmmmmmmmmmmm|\n" +
-                "|mmmmmmmmmmmmmmmmmmmm|\n" +
-                "|mmmmmmmmmmmmmmmmmmmm|\n" +
-                "|mmxxxxxxxxmmmmmmmmmm|\n" +
-                "|mmx      xmmmmmmmmmm|\n" +
-                "|mmxxxxxxxxmmmmmmmmmm|\n" +
-                "|mmmmmmmmmmmmmmmmmmmm|\n" +
-                "|mmmmmmmmmmmmmmmmmmmm|\n" +
-                "|mmmmmmmmmmmmmmmmmmmm|\n" +
-                "*--------------------*\n";
+                "*--------------------*"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|  xxxxxxxx          |"+ lineBreak +
+                "|  x      x          |"+ lineBreak +
+                "|  xxxxxxxx          |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "|                    |"+ lineBreak +
+                "*--------------------*"+ lineBreak +
+                "*--------------------*"+ lineBreak +
+                "|mmmmmmmmmmmmmmmmmmmm|"+ lineBreak +
+                "|mmmmmmmmmmmmmmmmmmmm|"+ lineBreak +
+                "|mmmmmmmmmmmmmmmmmmmm|"+ lineBreak +
+                "|mmmmmmmmmmmmmmmmmmmm|"+ lineBreak +
+                "|mmxxxxxxxxmmmmmmmmmm|"+ lineBreak +
+                "|mmx      xmmmmmmmmmm|"+ lineBreak +
+                "|mmxxxxxxxxmmmmmmmmmm|"+ lineBreak +
+                "|mmmmmmmmmmmmmmmmmmmm|"+ lineBreak +
+                "|mmmmmmmmmmmmmmmmmmmm|"+ lineBreak +
+                "|mmmmmmmmmmmmmmmmmmmm|"+ lineBreak +
+                "*--------------------*"+ lineBreak;
 
         assertEquals(canvasString, outContent.toString());
     }
